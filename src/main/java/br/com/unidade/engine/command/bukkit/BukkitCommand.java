@@ -40,7 +40,7 @@ public final class BukkitCommand extends Command {
 
         CommandNode node = sortedNodes.get(sortedNodes.size() - 1);
         if(node.getMatchProbability(sender, label, args, false) < 90) {
-            if(node.getHelpNodes().size() == 0) {
+            if(node.getHelpNodes().isEmpty()) {
                 node.sendUsageMessage(sender);
                 return false;
             }
