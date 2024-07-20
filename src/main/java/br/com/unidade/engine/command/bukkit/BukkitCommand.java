@@ -7,8 +7,10 @@ import br.com.unidade.engine.command.paramter.ParamProcessor;
 import br.com.unidade.engine.command.CommandHandler;
 import lombok.Getter;
 import lombok.SneakyThrows;
+import org.bukkit.Server;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
+import org.bukkit.craftbukkit.v1_8_R3.CraftServer;
 import org.bukkit.plugin.Plugin;
 
 import java.lang.reflect.Field;
@@ -27,10 +29,29 @@ public final class BukkitCommand extends Command {
         super(root);
         commands.put(root.toLowerCase(), this);
 
-        Field commandMap = ((Plugin) CommandHandler.getPlugin()).getServer().getClass().getDeclaredField("commandMap");
-        commandMap.setAccessible(true);
-        ((org.bukkit.command.CommandMap) commandMap.get(CommandHandler.getPlugin())).register(CommandHandler.getPluginName(), this);
+        try {
+            Plugin plugin = (Plugin) CommandHandler.getPlugin();
+            if (plugin == null) {
+                throw new IllegalStateException("CommandHandler.getPlugin() did not return a valid Bukkit plugin instance.");
+            }
+
+            Server server = plugin.getServer();
+            if (!(server instanceof CraftServer)) {
+                throw new IllegalStateException("Plugin.getServer() did not return a CraftServer instance.");
+            }
+
+            CraftServer craftServer = (CraftServer) server;
+            Field commandMapField = CraftServer.class.getDeclaredField("commandMap");
+            commandMapField.setAccessible(true);
+            org.bukkit.command.CommandMap commandMap = (org.bukkit.command.CommandMap) commandMapField.get(craftServer);
+
+            // Register your command with the CommandMap
+            commandMap.register(CommandHandler.getPluginName(), this);
+        } catch (NoSuchFieldException | IllegalAccessException | IllegalArgumentException e) {
+            e.printStackTrace();
+        }
     }
+
 
     @SneakyThrows
     public boolean execute(CommandSender sender, String label, String[] args) {
