@@ -1,3 +1,5 @@
+import org.gradle.api.publish.maven.*
+
 plugins {
     id("java")
     id("maven-publish")
@@ -19,3 +21,16 @@ dependencies {
     compileOnly("com.github.skipdevelopment:pluto-spigot:1.0")
     compileOnly("com.github.skipdevelopment:pluto-bungee:1.0")
 }
+
+publishing {
+    publications {
+        create<MavenPublication>("maven") {
+            groupId = "br.com.unidade"
+            artifactId = "command-framework"
+            version = "1.0.0"
+
+            from(components["java"])
+        }
+    }
+}
+
