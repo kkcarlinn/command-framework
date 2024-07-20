@@ -66,14 +66,14 @@ public final class CommandNode {
 
         // Register bukkit/bungee command if it doesn't exist
         try {
-            Class.forName("org.bukkit.Bukkit");
-            names.forEach(name -> {
-                if(!BukkitCommand.getCommands().containsKey(name.split(" ")[0].toLowerCase())) new BukkitCommand(name.split(" ")[0].toLowerCase());
-            });
-        } catch (Exception e) {
-            e.printStackTrace();
+            Class.forName("net.md_5.bungee.api.plugin.TabExecutor");
             names.forEach(name -> {
                 if(!BungeeCommand.getCommands().containsKey(name.split(" ")[0].toLowerCase())) new BungeeCommand(name.split(" ")[0].toLowerCase());
+            });
+
+        } catch (Exception e) {
+            names.forEach(name -> {
+                if(!BukkitCommand.getCommands().containsKey(name.split(" ")[0].toLowerCase())) new BukkitCommand(name.split(" ")[0].toLowerCase());
             });
         }
 
