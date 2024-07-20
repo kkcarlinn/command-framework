@@ -1,6 +1,5 @@
 package br.com.unidade.engine.command.node;
 
-import br.com.unidade.engine.command.bungee.BungeeCommand;
 import br.com.unidade.engine.command.help.HelpNode;
 import br.com.unidade.engine.command.paramter.ParamProcessor;
 import br.com.unidade.engine.command.Command;
@@ -64,18 +63,11 @@ public final class CommandNode {
             parameters.add(new ArgumentNode(param.name(), param.concated(), param.required(), parameter));
         });
 
-        // Register bukkit/bungee command if it doesn't exist
-        try {
-            Class.forName("net.md_5.bungee.api.plugin.TabExecutor");
-            names.forEach(name -> {
-                if(!BungeeCommand.getCommands().containsKey(name.split(" ")[0].toLowerCase())) new BungeeCommand(name.split(" ")[0].toLowerCase());
-            });
+        // Register bukkit command
 
-        } catch (Exception e) {
-            names.forEach(name -> {
-                if(!BukkitCommand.getCommands().containsKey(name.split(" ")[0].toLowerCase())) new BukkitCommand(name.split(" ")[0].toLowerCase());
-            });
-        }
+        names.forEach(name -> {
+            if(!BukkitCommand.getCommands().containsKey(name.split(" ")[0].toLowerCase())) new BukkitCommand(name.split(" ")[0].toLowerCase());
+        });
 
         // Makes it so you can use /plugin:command
         List<String> toAdd = new ArrayList<>();

@@ -83,12 +83,7 @@ public final class CommandHandler {
     }
 
     public static void executeAsync(Runnable command) {
-        try {
-            org.bukkit.Bukkit.getScheduler()
-                    .runTaskAsynchronously((org.bukkit.plugin.Plugin) plugin, command);
-        } catch (Exception e) {
-            net.md_5.bungee.api.ProxyServer.getInstance().getScheduler()
-                    .runAsync((net.md_5.bungee.api.plugin.Plugin) plugin, command);
-        }
+        org.bukkit.Bukkit.getScheduler()
+                .runTaskAsynchronously((org.bukkit.plugin.Plugin) plugin, command);
     }
 }

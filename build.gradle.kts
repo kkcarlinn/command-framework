@@ -19,7 +19,6 @@ dependencies {
     implementation("org.projectlombok:lombok:1.18.32")
     annotationProcessor("org.projectlombok:lombok:1.18.32")
     compileOnly("com.github.skipdevelopment:pluto-spigot:1.0")
-    compileOnly("com.github.skipdevelopment:pluto-bungee:1.0")
 }
 
 publishing {
@@ -28,7 +27,6 @@ publishing {
             groupId = "br.com.unidade"
             artifactId = "command-framework"
             version = "1.0.0"
-
             from(components["java"])
         }
     }
