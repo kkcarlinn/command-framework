@@ -1,4 +1,4 @@
-package br.com.pentamc.core.engine.command.node;
+package br.com.unidade.engine.command.node;
 
 import lombok.Data;
 

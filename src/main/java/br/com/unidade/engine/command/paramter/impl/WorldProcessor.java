@@ -1,7 +1,7 @@
-package br.com.pentamc.core.engine.command.paramter.impl;
+package br.com.unidade.engine.command.paramter.impl;
 
-import br.com.pentamc.core.engine.command.paramter.Processor;
-import br.com.pentamc.core.engine.command.utils.CommandReflection;
+import br.com.unidade.engine.command.paramter.Processor;
+import br.com.unidade.engine.command.utils.CommandReflection;
 import org.bukkit.Bukkit;
 import org.bukkit.World;
 

@@ -1,6 +1,6 @@
-package br.com.pentamc.core.engine.command.utils;
+package br.com.unidade.engine.command.utils;
 
-import br.com.pentamc.core.resolver.method.MethodResolver;
+import br.com.unidade.resolver.method.MethodResolver;
 
 public final class CommandReflection {
 

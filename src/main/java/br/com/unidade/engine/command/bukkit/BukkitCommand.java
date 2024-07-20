@@ -1,10 +1,10 @@
-package br.com.pentamc.core.engine.command.bukkit;
+package br.com.unidade.engine.command.bukkit;
 
-import br.com.pentamc.core.engine.command.help.HelpNode;
-import br.com.pentamc.core.engine.command.node.ArgumentNode;
-import br.com.pentamc.core.engine.command.node.CommandNode;
-import br.com.pentamc.core.engine.command.paramter.ParamProcessor;
-import br.com.pentamc.core.engine.command.CommandHandler;
+import br.com.unidade.engine.command.help.HelpNode;
+import br.com.unidade.engine.command.node.ArgumentNode;
+import br.com.unidade.engine.command.node.CommandNode;
+import br.com.unidade.engine.command.paramter.ParamProcessor;
+import br.com.unidade.engine.command.CommandHandler;
 import lombok.Getter;
 import lombok.SneakyThrows;
 import org.bukkit.command.Command;

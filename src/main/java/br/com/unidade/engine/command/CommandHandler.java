@@ -1,12 +1,12 @@
-package br.com.pentamc.core.engine.command;
+package br.com.unidade.engine.command;
 
-import br.com.pentamc.core.engine.command.help.Help;
-import br.com.pentamc.core.engine.command.help.HelpNode;
-import br.com.pentamc.core.engine.command.node.CommandNode;
-import br.com.pentamc.core.engine.command.paramter.ParamProcessor;
-import br.com.pentamc.core.engine.command.paramter.Processor;
-import br.com.pentamc.core.resolver.ClassGetter;
-import br.com.pentamc.core.resolver.method.MethodResolver;
+import br.com.unidade.engine.command.help.Help;
+import br.com.unidade.engine.command.help.HelpNode;
+import br.com.unidade.engine.command.node.CommandNode;
+import br.com.unidade.engine.command.paramter.ParamProcessor;
+import br.com.unidade.engine.command.paramter.Processor;
+import br.com.unidade.resolver.ClassGetter;
+import br.com.unidade.resolver.method.MethodResolver;
 import lombok.Getter;
 import lombok.SneakyThrows;
 

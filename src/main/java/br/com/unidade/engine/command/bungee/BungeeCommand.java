@@ -1,10 +1,10 @@
-package br.com.pentamc.core.engine.command.bungee;
+package br.com.unidade.engine.command.bungee;
 
-import br.com.pentamc.core.engine.command.CommandHandler;
-import br.com.pentamc.core.engine.command.help.HelpNode;
-import br.com.pentamc.core.engine.command.node.ArgumentNode;
-import br.com.pentamc.core.engine.command.node.CommandNode;
-import br.com.pentamc.core.engine.command.paramter.ParamProcessor;
+import br.com.unidade.engine.command.CommandHandler;
+import br.com.unidade.engine.command.help.HelpNode;
+import br.com.unidade.engine.command.node.ArgumentNode;
+import br.com.unidade.engine.command.node.CommandNode;
+import br.com.unidade.engine.command.paramter.ParamProcessor;
 import lombok.Getter;
 import lombok.SneakyThrows;
 import net.md_5.bungee.api.ProxyServer;

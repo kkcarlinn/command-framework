@@ -1,4 +1,4 @@
-package br.com.pentamc.core.resolver;
+package br.com.unidade.resolver;
 
 public abstract class Resolver<T> {
 

@@ -1,8 +1,8 @@
-package br.com.pentamc.core.engine.command.paramter;
+package br.com.unidade.engine.command.paramter;
 
-import br.com.pentamc.core.engine.command.duration.Duration;
-import br.com.pentamc.core.engine.command.node.ArgumentNode;
-import br.com.pentamc.core.engine.command.paramter.impl.*;
+import br.com.unidade.engine.command.duration.Duration;
+import br.com.unidade.engine.command.node.ArgumentNode;
+import br.com.unidade.engine.command.paramter.impl.*;
 import lombok.Data;
 import lombok.Getter;
 
@@ -72,6 +72,7 @@ public final class ParamProcessor {
             processors.put(org.bukkit.OfflinePlayer.class, new OfflinePlayerProcessor());
             processors.put(org.bukkit.World.class, new WorldProcessor());
             processors.put(org.bukkit.GameMode.class, new GamemodeProcessor());
+            processors.put(net.md_5.bungee.api.connection.ProxiedPlayer.class, new ProxiedPlayerProcessor());
         } catch (Exception ignoredNoClassFound) {
 
         }

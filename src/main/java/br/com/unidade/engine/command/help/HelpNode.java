@@ -1,4 +1,4 @@
-package br.com.pentamc.core.engine.command.help;
+package br.com.unidade.engine.command.help;
 
 import lombok.Data;
 

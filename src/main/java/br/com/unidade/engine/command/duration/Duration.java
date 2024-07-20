@@ -1,4 +1,4 @@
-package br.com.pentamc.core.engine.command.duration;
+package br.com.unidade.engine.command.duration;
 
 import lombok.Data;
 

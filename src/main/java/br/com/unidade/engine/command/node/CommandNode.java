@@ -1,13 +1,13 @@
-package br.com.pentamc.core.engine.command.node;
+package br.com.unidade.engine.command.node;
 
-import br.com.pentamc.core.engine.command.bungee.BungeeCommand;
-import br.com.pentamc.core.engine.command.help.HelpNode;
-import br.com.pentamc.core.engine.command.paramter.ParamProcessor;
-import br.com.pentamc.core.engine.command.Command;
-import br.com.pentamc.core.engine.command.CommandHandler;
-import br.com.pentamc.core.engine.command.bukkit.BukkitCommand;
-import br.com.pentamc.core.engine.command.paramter.Param;
-import br.com.pentamc.core.engine.command.utils.CommandReflection;
+import br.com.unidade.engine.command.bungee.BungeeCommand;
+import br.com.unidade.engine.command.help.HelpNode;
+import br.com.unidade.engine.command.paramter.ParamProcessor;
+import br.com.unidade.engine.command.Command;
+import br.com.unidade.engine.command.CommandHandler;
+import br.com.unidade.engine.command.bukkit.BukkitCommand;
+import br.com.unidade.engine.command.paramter.Param;
+import br.com.unidade.engine.command.utils.CommandReflection;
 import lombok.Getter;
 import lombok.SneakyThrows;
 

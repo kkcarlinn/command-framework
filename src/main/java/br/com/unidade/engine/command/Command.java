@@ -1,4 +1,4 @@
-package br.com.pentamc.core.engine.command;
+package br.com.unidade.engine.command;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

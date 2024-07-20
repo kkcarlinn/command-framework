@@ -1,6 +1,6 @@
-package br.com.pentamc.core.resolver.field;
+package br.com.unidade.resolver.field;
 
-import br.com.pentamc.core.resolver.Resolver;
+import br.com.unidade.resolver.Resolver;
 import lombok.RequiredArgsConstructor;
 
 import java.lang.reflect.Field;

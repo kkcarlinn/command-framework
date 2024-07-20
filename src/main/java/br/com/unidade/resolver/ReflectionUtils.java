@@ -1,4 +1,4 @@
-package br.com.pentamc.core.resolver;
+package br.com.unidade.resolver;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;

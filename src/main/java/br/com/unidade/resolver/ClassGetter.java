@@ -1,6 +1,6 @@
-package br.com.pentamc.core.resolver;
+package br.com.unidade.resolver;
 
-import br.com.pentamc.core.resolver.method.MethodResolver;
+import br.com.unidade.resolver.method.MethodResolver;
 import lombok.experimental.UtilityClass;
 
 import java.io.File;

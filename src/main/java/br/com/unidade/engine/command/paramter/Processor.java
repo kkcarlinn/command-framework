@@ -1,4 +1,4 @@
-package br.com.pentamc.core.engine.command.paramter;
+package br.com.unidade.engine.command.paramter;
 
 import lombok.Getter;
 import lombok.SneakyThrows;

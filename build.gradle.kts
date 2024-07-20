@@ -3,17 +3,18 @@ plugins {
 }
 
 group = "br.com.unidade"
-version = "1.0-SNAPSHOT"
+version = "1.0.0"
 
 repositories {
     mavenCentral()
+    maven {
+        url = uri("https://jitpack.io")
+    }
 }
 
 dependencies {
-    testImplementation(platform("org.junit:junit-bom:5.10.0"))
-    testImplementation("org.junit.jupiter:junit-jupiter")
-}
-
-tasks.test {
-    useJUnitPlatform()
+    implementation("org.projectlombok:lombok:1.18.32")
+    annotationProcessor("org.projectlombok:lombok:1.18.32")
+    compileOnly("com.github.skipdevelopment:pluto-spigot:1.0")
+    compileOnly("com.github.skipdevelopment:pluto-bungee:1.0")
 }

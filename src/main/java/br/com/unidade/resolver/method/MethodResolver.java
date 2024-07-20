@@ -1,6 +1,6 @@
-package br.com.pentamc.core.resolver.method;
+package br.com.unidade.resolver.method;
 
-import br.com.pentamc.core.resolver.Resolver;
+import br.com.unidade.resolver.Resolver;
 
 import java.lang.reflect.Method;
 
