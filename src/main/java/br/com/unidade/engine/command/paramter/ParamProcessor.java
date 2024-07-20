@@ -72,7 +72,6 @@ public final class ParamProcessor {
             processors.put(org.bukkit.OfflinePlayer.class, new OfflinePlayerProcessor());
             processors.put(org.bukkit.World.class, new WorldProcessor());
             processors.put(org.bukkit.GameMode.class, new GamemodeProcessor());
-            processors.put(net.md_5.bungee.api.connection.ProxiedPlayer.class, new ProxiedPlayerProcessor());
         } catch (Exception ignoredNoClassFound) {
 
         }
